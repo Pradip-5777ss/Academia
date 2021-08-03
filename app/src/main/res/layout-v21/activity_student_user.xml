@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".StudentDashboard.StudentUser">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/studentUserToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main">
+
+        <ImageView
+            android:id="@+id/studentUserBackBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:onClick="studentProfileBackToPreviousPage"
+            android:src="@drawable/back_btn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textSize="20sp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto_slab"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name : "
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_slab_bold"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/studentFirstname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Firstname"
+                android:ellipsize="start"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_slab"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/studentMiddlename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="secondname"
+                android:layout_marginStart="3dp"
+                android:fontFamily="@font/roboto_slab"
+                android:textColor="@color/black"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/studentLastname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="thirdname"
+                android:maxLength="20"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:layout_marginStart="3dp"
+                android:fontFamily="@font/roboto_slab"
+                android:textColor="@color/black"
+                android:textSize="18sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DOB : "
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_slab_bold"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/studentDateOfBirth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DateofBirth"
+                android:ellipsize="start"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_slab"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone : "
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_slab_bold"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/studentPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="phone"
+                android:ellipsize="start"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_slab"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aadhar No : "
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_slab_bold"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/studentAadhar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="aadhar"
+                android:ellipsize="start"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_slab"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Caste : "
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/studentCaste"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="general"
+                    android:ellipsize="start"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_slab"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SEX : "
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/studentGender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:ellipsize="start"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_slab"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email : "
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_slab_bold"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/studentEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="email"
+                android:ellipsize="start"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_slab"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address : "
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_slab_bold"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/studentAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="address"
+                android:ellipsize="start"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_slab"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Roll No : "
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_slab_bold"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/studentRollNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="roll"
+                android:ellipsize="start"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_slab"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reg No : "
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_slab_bold"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/studentRegNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="reg"
+                android:ellipsize="start"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_slab"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stream : "
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_slab_bold"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/studentStream"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="stream"
+                android:ellipsize="start"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_slab"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Course : "
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_slab_bold"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/studentCourse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="course"
+                android:ellipsize="start"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_slab"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Year : "
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/studentyear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="year"
+                    android:ellipsize="start"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_slab"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Semester : "
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/studentSemester"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="semester"
+                    android:ellipsize="start"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_slab"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nationality : "
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_slab_bold"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/studentCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="country"
+                android:ellipsize="start"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_slab"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Parents Name : "
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_slab_bold"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/studentParentName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="p name"
+                android:ellipsize="start"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_slab"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Parents Contact : "
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_slab_bold"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/studentParentPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="p ph"
+                android:ellipsize="start"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_slab"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password : "
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_slab_bold"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/studentPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="pass"
+                android:ellipsize="start"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_slab"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

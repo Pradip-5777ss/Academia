@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".AdminDashboard.AddStudent.AddStudent">
+
+    <LinearLayout
+        android:id="@+id/addStudentTextview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/main">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Student\nRegistration"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="35sp"
+            android:fontFamily="@font/roboto_slab_bold"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/addStudentTextview">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/addStudent_LL_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/first_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:hint="First Name"
+                    android:textColorHint="@color/light_gray1"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/main"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/black"
+                    app:hintTextColor="@color/main"
+                    app:startIconDrawable="@drawable/fullname_icon"
+                    app:startIconTint="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/modifiedEditText"
+                        android:maxLines="1"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/middle_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:hint="Middle name"
+                    android:textColorHint="@color/light_gray1"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/main"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/black"
+                    app:hintTextColor="@color/main"
+                    app:startIconDrawable="@drawable/fullname_icon"
+                    app:startIconTint="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/modifiedEditText"
+                        android:maxLines="1"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addStudent_LL_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addStudent_LL_1"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:hint="Last Name"
+                    android:textColorHint="@color/light_gray1"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/main"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/black"
+                    app:hintTextColor="@color/main"
+                    app:startIconDrawable="@drawable/fullname_icon"
+                    app:startIconTint="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/modifiedEditText"
+                        android:maxLines="1"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/DOB"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Gender"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/Student_Gender"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="D O B"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/student_Gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clipChildren="true"
+                        android:layout_marginTop="5dp"
+                        android:spinnerMode="dropdown"
+                        android:background="@drawable/spinner_look"
+                        android:popupBackground="@color/white"
+
+                        />
+
+                    <ImageButton
+                        android:id="@+id/DateImageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="0"
+                        android:background="@color/white"
+                        android:src="@drawable/calendar_icon" />
+
+                    <EditText
+                        android:id="@+id/DateEditText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="5"
+                        android:textColor="@color/black">
+
+                        <requestFocus />
+                    </EditText>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addStudent_LL_03"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addStudent_LL_2"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/addStudentCaste"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_weight="1"
+                        android:text="Caste"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/addStudentNationality"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="4dp"
+                        android:text="Country"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/addStudentcaste_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:spinnerMode="dropdown"
+                        android:popupBackground="@color/white"
+                        android:background="@drawable/spinner_look" />
+
+
+                    <Spinner
+                        android:id="@+id/addStudentnationality_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:spinnerMode="dropdown"
+                        android:popupBackground="@color/white"
+                        android:background="@drawable/spinner_look" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addStudent_LL_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addStudent_LL_03"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/course_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_weight="1"
+                        android:text="Course"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/stream_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="4dp"
+                        android:layout_weight="1"
+                        android:text="Stream"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Spinner
+                        android:id="@+id/course_spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:layout_weight="1"
+                        android:autofillHints="Course"
+                        android:popupBackground="@color/white"
+                        android:spinnerMode="dropdown"
+                        android:background="@drawable/spinner_look" />
+
+
+                    <Spinner
+                        android:id="@+id/stream_spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        android:spinnerMode="dropdown"
+                        android:popupBackground="@color/white"
+                        android:background="@drawable/spinner_look" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addStudent_LL_04"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addStudent_LL_3"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/year_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_weight="1"
+                        android:text="Year"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/semester_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="4dp"
+                        android:layout_weight="1"
+                        android:text="Semester"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Spinner
+                        android:id="@+id/year_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:layout_weight="1"
+                        android:autofillHints="Course"
+                        android:popupBackground="@color/white"
+                        android:spinnerMode="dropdown"
+                        android:background="@drawable/spinner_look" />
+
+
+                    <Spinner
+                        android:id="@+id/semester_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        android:spinnerMode="dropdown"
+                        android:popupBackground="@color/white"
+                        android:background="@drawable/spinner_look" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addStudent_LL_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addStudent_LL_04"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+<!--                <com.hbb20.CountryCodePicker-->
+<!--                    android:id="@+id/addStudentcountry_code_picker"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1.7"-->
+<!--                    android:background="@drawable/form_field"-->
+<!--                    android:padding="7dp"-->
+<!--                    app:ccpDialog_backgroundColor="@color/white"-->
+<!--                    app:ccp_autoDetectCountry="true"-->
+<!--                    app:ccp_showNameCode="true" />-->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/phoneNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Contact"
+                    android:textColorHint="@color/light_gray1"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/main"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/black"
+                    app:hintTextColor="@color/main"
+                    app:startIconDrawable="@drawable/phone_logo"
+                    app:startIconTint="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/modifiedEditText"
+                        android:inputType="phone"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addStudent_LL_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addStudent_LL_4"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:padding="10dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/aadharNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Aadhar No"
+                    android:textColorHint="@color/light_gray1"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/main"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/black"
+                    app:hintTextColor="@color/main"
+                    app:startIconDrawable="@drawable/fullname_icon"
+                    app:startIconTint="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/modifiedEditText"
+                        android:maxLines="1"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addStudent_LL_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addStudent_LL_5"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:padding="10dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/registration_No"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Registration No"
+                    android:textColorHint="@color/light_gray1"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/main"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/black"
+                    app:hintTextColor="@color/main"
+                    app:startIconDrawable="@drawable/fullname_icon"
+                    app:startIconTint="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/modifiedEditText"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addStudent_LL_7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addStudent_LL_6"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:padding="10dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/roll_No"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Roll No"
+                    android:textColorHint="@color/light_gray1"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/main"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/black"
+                    app:hintTextColor="@color/main"
+                    app:startIconDrawable="@drawable/fullname_icon"
+                    app:startIconTint="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/modifiedEditText"
+                        android:maxLines="1"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/addStudent_LL_8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addStudent_LL_7"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:padding="10dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/email_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email-id"
+                    android:textColorHint="@color/light_gray1"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/main"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/black"
+                    app:hintTextColor="@color/main"
+                    app:startIconDrawable="@drawable/email_logo"
+                    app:startIconTint="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/modifiedEditText"
+                        android:maxLines="1"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/addStudent_LL_9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addStudent_LL_8"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:padding="10dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/parents_Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Parents Name"
+                    android:textColorHint="@color/light_gray1"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/main"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/black"
+                    app:hintTextColor="@color/main"
+                    app:startIconDrawable="@drawable/fullname_icon"
+                    app:startIconTint="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/modifiedEditText"
+                        android:maxLines="1"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/addStudent_LL_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addStudent_LL_9"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+<!--                <com.hbb20.CountryCodePicker-->
+<!--                    android:id="@+id/parentcountry_code_picker"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1.7"-->
+<!--                    android:background="@drawable/form_field"-->
+<!--                    android:padding="7dp"-->
+<!--                    app:ccpDialog_backgroundColor="@color/white"-->
+<!--                    app:ccp_autoDetectCountry="true"-->
+<!--                    app:ccp_showNameCode="true" />-->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/parents_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Parents Contact"
+                    android:textColorHint="@color/light_gray1"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/main"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/black"
+                    app:hintTextColor="@color/main"
+                    app:startIconDrawable="@drawable/phone_logo"
+                    app:startIconTint="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/modifiedEditText"
+                        android:inputType="phone"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/addStudent_LL_11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addStudent_LL_10"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:padding="10dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Address"
+                    android:textColorHint="@color/light_gray1"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/main"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/black"
+                    app:hintTextColor="@color/main"
+                    app:startIconDrawable="@drawable/fullname_icon"
+                    app:startIconTint="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/modifiedEditText"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addStudent_LL_12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addStudent_LL_11"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:padding="10dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Password"
+                    android:textColorHint="@color/light_gray1"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/main"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:hintTextColor="@color/main"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/black"
+                    app:startIconDrawable="@drawable/ic_baseline_lock_24"
+                    app:startIconTint="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/modifiedEditText"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addStudent_LL_13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addStudent_LL_12"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/check_confirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:buttonTint="@color/black"
+                    android:checked="false"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Confirm"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addstudent_LL_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addStudent_LL_13"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="50dp"
+                android:gravity="center_horizontal"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/register_student"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_bg"
+                    android:backgroundTint="@color/main"
+                    android:elevation="10dp"
+                    android:gravity="center"
+                    android:paddingLeft="50dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="50dp"
+                    android:paddingBottom="5dp"
+                    android:onClick="registerStudent"
+                    android:text="Register"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                     />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

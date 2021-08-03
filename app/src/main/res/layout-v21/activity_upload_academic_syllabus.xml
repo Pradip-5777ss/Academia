@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".AdminDashboard.Academics.AcademicSyllabus.UploadAcademicSyllabus">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/uploadSyllabusToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:onClick="syllabusBackToPreviousPage"
+            android:src="@drawable/back_btn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload Syllabus"
+            android:textSize="20sp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto_slab"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/syllabus_upload_Pdf"
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:layout_below="@id/uploadSyllabusToolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="80dp"
+        android:src="@drawable/ic_baseline_picture_as_pdf_24" />
+
+    <ImageView
+        android:id="@+id/syllabus_scan_Pdf"
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/uploadSyllabusToolbar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="80dp"
+        android:src="@drawable/ic_baseline_document_scanner_24" />
+
+    <TextView
+        android:id="@+id/syllabus_pdf_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/syllabus_scan_Pdf"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:hint="No file Selected"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="16sp" />
+
+
+    <LinearLayout
+        android:id="@+id/SYLll1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/syllabus_upload_Pdf"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="70dp">
+
+        <Button
+            android:id="@+id/syllabus_browse_Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button"
+            android:elevation="8dp"
+            android:onClick="browseSyllabusDoc"
+            android:text="Browse"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/syllabus_upload_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="80dp"
+            android:layout_weight="1"
+            android:background="@drawable/button"
+            android:elevation="8dp"
+            android:onClick="uploadSyllabusDoc"
+            android:text="Upload"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/selectStreamSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_below="@id/SYLll1"
+        >
+
+        <Spinner
+            android:id="@+id/select_stream_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown"
+            android:popupBackground="@color/white"
+            android:background="@drawable/spinner_look" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/syllabus_cancel_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/uploadSyllabusToolbar"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="34dp"
+        android:src="@drawable/ic_baseline_close_24" />
+
+    <LinearLayout
+        android:id="@+id/ViewSyllabus_LL_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selectStreamSpinner"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="center_horizontal"
+        >
+
+        <Button
+            android:id="@+id/viewSYL_doc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/button"
+            android:backgroundTint="@color/main"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:paddingLeft="50dp"
+            android:paddingTop="5dp"
+            android:paddingRight="50dp"
+            android:paddingBottom="5dp"
+            android:onClick="viewAcademicSyllabus"
+            android:text="View Pdf"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
+</RelativeLayout>

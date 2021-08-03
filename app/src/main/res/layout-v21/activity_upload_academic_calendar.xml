@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".AdminDashboard.Academics.AcademicCalendar.UploadAcademicCalendar">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/uploadCalToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:onClick="backToPreviousPage"
+            android:src="@drawable/back_btn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload Calendar"
+            android:textSize="20sp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto_slab"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/calender_upload_Pdf"
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:layout_below="@id/uploadCalToolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="80dp"
+        android:src="@drawable/ic_baseline_picture_as_pdf_24" />
+
+    <ImageView
+        android:id="@+id/calender_scan_Pdf"
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/uploadCalToolbar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="80dp"
+        android:src="@drawable/ic_baseline_document_scanner_24" />
+
+    <TextView
+        android:id="@+id/pdf_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/calender_scan_Pdf"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:hint="No file Selected"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="16sp" />
+
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/calender_upload_Pdf"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="70dp">
+
+        <Button
+            android:id="@+id/browse_Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button"
+            android:elevation="8dp"
+            android:onClick="browseCalenderDoc"
+            android:text="Browse"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/upload_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="80dp"
+            android:layout_weight="1"
+            android:background="@drawable/button"
+            android:elevation="8dp"
+            android:onClick="uploadCalendarDoc"
+            android:text="Upload"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/calendar_cancel_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/uploadCalToolbar"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="34dp"
+        android:src="@drawable/ic_baseline_close_24" />
+
+    <LinearLayout
+        android:id="@+id/uploadCAl_LL_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="center_horizontal"
+        >
+
+        <Button
+            android:id="@+id/viewCAL_doc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/button"
+            android:backgroundTint="@color/main"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:paddingLeft="50dp"
+            android:paddingTop="5dp"
+            android:paddingRight="50dp"
+            android:paddingBottom="5dp"
+            android:onClick="viewAcademicCalendar"
+            android:text="View Pdf"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
+
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_below="@id/view1">-->
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/calendar_RecyclerView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent" />-->
+
+<!--    </RelativeLayout>-->
+</RelativeLayout>

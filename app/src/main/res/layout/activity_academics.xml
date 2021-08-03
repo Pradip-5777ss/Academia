@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".AdminDashboard.Academics.Academics">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/academics_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/blue1"
+        android:backgroundTint="@color/blue1">
+
+        <ImageView
+            android:id="@+id/academics_backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="academicsBackBtn"
+            android:src="@drawable/back_btn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:fontFamily="@font/roboto_slab_bold"
+            android:text="Academics"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/academics_toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <RelativeLayout
+                android:id="@+id/admin_academic_calender"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/corners"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/mobile_icon"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:foregroundGravity="center"
+                    android:src="@drawable/ic_baseline_calendar_today_24" />
+
+                <TextView
+                    android:id="@+id/academic_calender_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/academic_calender"
+                    android:layout_alignEnd="@id/academic_calender"
+                    android:layout_alignBottom="@id/academic_calender"
+                    android:layout_toEndOf="@+id/mobile_icon"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:gravity="center"
+                    android:text="Academic\nCalender"
+                    android:textColor="@color/black"
+                    android:textSize="35sp" />
+
+                <Button
+                    android:id="@+id/academic_calender"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="academicCalender"
+                    android:background="@drawable/btn_transparent" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/admin_study_material"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/corners"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/studyMaterial"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:foregroundGravity="center"
+                    android:src="@drawable/study_material" />
+
+                <TextView
+                    android:id="@+id/study_material_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/study_material"
+                    android:layout_alignEnd="@id/study_material"
+                    android:layout_alignBottom="@id/study_material"
+                    android:layout_toEndOf="@+id/studyMaterial"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:gravity="center"
+                    android:text="Study\nMaterial"
+                    android:textColor="@color/black"
+                    android:textSize="35sp" />
+
+                <Button
+                    android:id="@+id/study_material"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="studyMaterial"
+                    android:background="@drawable/btn_transparent" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/admin_academic_routine"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/corners"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/academicRoutine"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:foregroundGravity="center"
+                    android:src="@drawable/routine" />
+
+                <TextView
+                    android:id="@+id/mobile_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/academic_routine"
+                    android:layout_alignEnd="@id/academic_routine"
+                    android:layout_alignBottom="@id/academic_routine"
+                    android:layout_toEndOf="@+id/academicRoutine"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:gravity="center"
+                    android:text="Academic\nRoutine"
+                    android:textColor="@color/black"
+                    android:textSize="35sp" />
+
+                <Button
+                    android:id="@+id/academic_routine"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="academicRoutine"
+                    android:background="@drawable/btn_transparent" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/admin_academic_syllabus"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/corners"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/academicSyllabus"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:foregroundGravity="center"
+                    android:src="@drawable/syllabus" />
+
+                <TextView
+                    android:id="@+id/syllabus_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/academic_syllabus"
+                    android:layout_alignEnd="@id/academic_syllabus"
+                    android:layout_alignBottom="@id/academic_syllabus"
+                    android:layout_toEndOf="@+id/academicSyllabus"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:gravity="center"
+                    android:text="Academic\nSyllabus"
+                    android:textColor="@color/black"
+                    android:textSize="35sp" />
+
+                <Button
+                    android:id="@+id/academic_syllabus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="academicSyllabus"
+                    android:background="@drawable/btn_transparent" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+
+</RelativeLayout>

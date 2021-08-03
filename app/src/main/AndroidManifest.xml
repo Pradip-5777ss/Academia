@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.pradipsahoo7722gmail.cms">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/main_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/main_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".FacultyDashboard.FacultyRoutine.FacultyViewRoutineWebview"></activity>
+        <activity android:name=".FacultyDashboard.FacultyRoutine.FacultyViewRoutine" />
+        <activity android:name=".StudentDashboard.Routine.ViewStudentRoutineWebView" />
+        <activity android:name=".StudentDashboard.Routine.ViewStudentRoutine" />
+        <activity android:name=".StudentDashboard.StudentAttrndance.StudentAttendanceWebView" />
+        <activity android:name=".StudentDashboard.StudentAttrndance.StudentViewAttendance" />
+        <activity android:name=".StudentDashboard.StudentAttrndance.SelectUserSubject" />
+        <activity android:name=".FacultyDashboard.Attendance.AttendanceTakingWebView" />
+        <activity android:name=".FacultyDashboard.Attendance.ViewAttendance" />
+        <activity android:name=".FacultyDashboard.Attendance.AttendanceTaking" />
+        <activity android:name=".FacultyDashboard.FacultySyllabus.FacultyViewAcademicSyllabusWebview" />
+        <activity android:name=".FacultyDashboard.FacultySyllabus.FacultyViewSyllabus" />
+        <activity android:name=".FacultyDashboard.FacultySyllabus.SelectFacultyStream" />
+        <activity android:name=".FacultyDashboard.FacultyUser" />
+        <activity android:name=".FacultyDashboard.AcademicNotice.FacultyNoticeWebView" />
+        <activity android:name=".FacultyDashboard.AcademicNotice.FacultyViewAcademicNotice" />
+        <activity android:name=".FacultyDashboard.AcademicCalendar.FacultyCalendarWebview" />
+        <activity android:name=".FacultyDashboard.AcademicCalendar.ViewAcademicCalendarToFaculty" />
+        <activity android:name=".StudentDashboard.ViewStudentProfileImage" />
+        <activity android:name=".AdminDashboard.ViewStudent.ViewStudentOptions" />
+        <activity android:name=".StudentDashboard.StudentUser" />
+        <activity android:name=".StudentDashboard.Calendar.ViewAcademicCalendarToStudents" />
+        <activity android:name=".StudentDashboard.Notice.StudentViewNoticeWebView" />
+        <activity android:name=".StudentDashboard.Notice.StudentViewNoticeRecView" />
+        <activity android:name=".AdminDashboard.Notice.ViewNoticeWebview" />
+        <activity android:name=".AdminDashboard.Notice.ViewNotice" />
+        <activity android:name=".AdminDashboard.Notice.UploadNotice" />
+        <activity android:name=".AdminDashboard.Academics.AcademicSyllabus.ViewAcademicSyllabusWebView" />
+        <activity android:name=".AdminDashboard.Academics.AcademicSyllabus.ViewAcademicSyllabus" />
+        <activity android:name=".StudentDashboard.Syllabus.StudentSyllabusWebView" />
+        <activity android:name=".StudentDashboard.Syllabus.StudentViewSyllabus" />
+        <activity android:name=".StudentDashboard.Syllabus.SelectUserStream" />
+        <activity android:name=".AdminDashboard.Academics.AcademicSyllabus.UploadAcademicSyllabus" />
+        <activity android:name=".StudentDashboard.Calendar.StudentCalendarWebView" />
+        <activity android:name=".AdminDashboard.Academics.AcademicRoutine.RoutineView" />
+        <activity android:name=".AdminDashboard.Academics.AcademicRoutine.ViewAcademicRoutine" />
+        <activity android:name=".AdminDashboard.Academics.AcademicRoutine.UploadAcademicRoutine" />
+        <activity android:name=".AdminDashboard.Academics.StudyMaterial.ResourceView" />
+        <activity android:name=".AdminDashboard.Academics.StudyMaterial.ViewAcademicResource" />
+        <activity android:name=".AdminDashboard.Academics.AcademicCalendar.CalendarView" />
+        <activity android:name=".AdminDashboard.Academics.AcademicCalendar.ViewAcademicaCalendar" />
+        <activity android:name=".AdminDashboard.Academics.StudyMaterial.UploadStudyMaterial" />
+        <activity android:name=".AdminDashboard.Academics.AcademicCalendar.UploadAcademicCalendar" />
+        <activity
+            android:name=".FacultyDashboard.FacultyDashboard"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar" />
+        <activity android:name=".SelectUserLogin.FacultyLoginPage" />
+        <activity android:name=".SelectUserLogin.StudentLoginPage" />
+        <activity android:name=".SelectUserLogin.SelectLoginProcess" />
+        <activity
+            android:name=".StudentDashboard.StudentDashboard"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar" />
+        <activity android:name=".AdminDashboard.ViewFaculty.ViewFaculty" />
+        <activity android:name=".AdminDashboard.ViewStudent.ViewStudent" />
+        <activity android:name=".AdminDashboard.Academics.Academics" />
+        <activity android:name=".AdminDashboard.AddFaculty.AddFaculty" />
+        <activity android:name=".AdminDashboard.AddStudent.AddStudent" />
+        <activity
+            android:name=".AdminDashboard.AdminProfile"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar" />
+        <activity android:name=".RegisterAdmin.VerifyOTP" />
+        <activity android:name=".RegisterAdmin.SignupAdminThirdScreen" />
+        <activity android:name=".RegisterAdmin.SignupAdminSecondScreen" />
+        <activity android:name=".RegisterAdmin.SignupAdmin" />
+        <activity android:name=".LoginUser.LoginScreen" />
+        <activity android:name=".SplashScreen.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

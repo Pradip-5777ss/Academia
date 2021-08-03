@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main"
+    tools:context=".StudentDashboard.StudentDashboard"
+    tools:openDrawer="start">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/student_dashboard_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main"
+            >
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:id="@+id/ll12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dashboard"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_slab"/>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/profile_cardView"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_below="@id/student_dashboard_toolbar"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:layout_gravity="center|top">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:src="@drawable/login_avatar"
+                    app:civ_border_width="1dp"
+                    app:civ_circle_background_color="@color/circle" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image_upload_btn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:onClick="selectImage"
+                    android:layout_alignEnd="@id/profile_image"
+                    android:layout_alignBottom="@id/profile_image"
+                    android:layout_gravity="center_horizontal|center|end"
+                    android:src="@drawable/ic_baseline_camera_24" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    >
+                    <TextView
+                        android:id="@+id/studentDashboard_firstname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_slab"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/studentDashboard_middlename"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_slab"
+                        android:gravity="center"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginEnd="3dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/studentDashboard_lastname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:fontFamily="@font/roboto_slab"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/studentDashboard_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_slab"
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_cardView">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alignmentMode="alignMargins"
+                android:columnCount="2"
+                android:columnOrderPreserved="true"
+                android:rowCount="4">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/syllabus_CardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:onClick="studentSyllabus"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/syllabus"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/syllabus" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Syllabus"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/attendance_CardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    app:cardBackgroundColor="@color/whiteTextColor"
+                    android:onClick="StudentAttendance"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/attendance"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/attendance" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Attendance"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/routine_CardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:onClick="StudentViewRoutine"
+                    app:cardBackgroundColor="@color/whiteTextColor"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/routine"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/routine" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/roboto_slab"
+                            android:text="Routine"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/student_calendar_CardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    app:cardBackgroundColor="@color/whiteTextColor"
+                    android:onClick="academicCalendarViewToStudent"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/academic_calendar"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/academic_calendar" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/roboto_slab"
+                            android:text="Calendar"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/result_CardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    app:cardBackgroundColor="@color/whiteTextColor"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/academic_result"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/result" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/roboto_slab"
+                            android:text="Result"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/notice_CardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:onClick="studentViewNotice"
+                    app:cardBackgroundColor="@color/whiteTextColor"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/academic_notice"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/notice" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/roboto_slab"
+                            android:text="Notice"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </GridLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navmenu"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        app:itemTextColor="@color/black"
+        app:itemIconTint="@color/black"
+        app:headerLayout="@layout/student_dashboard_navmenu"
+        app:menu="@menu/student_dashboard_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
+    <!--<RelativeLayout
+<!-    xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    android:background="@color/white"-->
+    <!--    android:backgroundTint="@color/white"-->
+    <!--    tools:context=".StudentDashboard.StudentDashboard">-->
+
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/ll1"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentStart="true"-->
+    <!--        android:layout_alignParentTop="true"-->
+    <!--        android:layout_alignParentEnd="true"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        android:orientation="horizontal">-->
+
+    <!--        <androidx.appcompat.widget.Toolbar-->
+    <!--            android:id="@+id/dashboard_toolbar"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            >-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                >-->
+
+    <!--                <ImageView-->
+    <!--                    android:id="@+id/navigation_menu"-->
+    <!--                    android:layout_width="40dp"-->
+    <!--                    android:layout_height="40dp"-->
+    <!--                    android:layout_gravity="fill_vertical"-->
+    <!--                    android:src="@drawable/ic_baseline_menu_24"-->
+    <!--                    />-->
+
+    <!--                <TextView-->
+    <!--                    android:id="@+id/dashboard_title"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:fontFamily="@font/roboto_slab_bold"-->
+    <!--                    android:gravity="center"-->
+    <!--                    android:layout_weight="1"-->
+    <!--                    android:layout_marginEnd="15dp"-->
+    <!--                    android:layout_gravity="center_horizontal"-->
+    <!--                    android:text="Dashboard"-->
+    <!--                    android:textColor="@color/black"-->
+    <!--                    android:textSize="30sp"-->
+    <!--                    android:textStyle="bold"-->
+    <!--                    />-->
+
+    <!--            </LinearLayout>-->
+
+    <!--        </androidx.appcompat.widget.Toolbar>-->
+
+    <!--    </LinearLayout>-->
+
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/profile_cardView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="230dp"-->
+<!--            android:layout_below="@id/ll1"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:backgroundTint="@color/main"-->
+<!--            android:padding="10dp"-->
+<!--            app:cardCornerRadius="8dp"-->
+<!--            app:cardElevation="10dp">-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center">-->
+
+<!--                <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                    android:id="@+id/profile_image"-->
+<!--                    android:layout_width="120dp"-->
+<!--                    android:layout_height="120dp"-->
+<!--                    android:src="@drawable/login_avatar"-->
+<!--                    app:civ_border_width="1dp"-->
+<!--                    app:civ_circle_background_color="@color/circle" />-->
+
+<!--                <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_alignEnd="@id/profile_image"-->
+<!--                    android:layout_alignBottom="@id/profile_image"-->
+<!--                    android:layout_gravity="center_horizontal|center|end"-->
+<!--                    android:src="@drawable/ic_baseline_camera_24" />-->
+
+<!--            </RelativeLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="bottom"-->
+<!--                android:layout_marginBottom="8dp"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:fontFamily="@font/roboto_slab"-->
+<!--                    android:text="name"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="20sp" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:fontFamily="@font/roboto_slab"-->
+<!--                    android:text="pradipsahoo7722@gmail.com"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="@color/white" />-->
+
+<!--            </LinearLayout>-->
+
+
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        <ScrollView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/profile_cardView">-->
+
+<!--            <GridLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:alignmentMode="alignMargins"-->
+<!--                android:columnCount="2"-->
+<!--                android:columnOrderPreserved="true"-->
+<!--                android:rowCount="4">-->
+
+<!--                <com.google.android.material.card.MaterialCardView-->
+<!--                    android:id="@+id/syllabus_CardView"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_rowWeight="1"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_margin="12dp"-->
+<!--                    app:cardBackgroundColor="@color/white"-->
+<!--                    android:onClick="studentSyllabus"-->
+<!--                    app:cardCornerRadius="16dp"-->
+<!--                    app:cardElevation="8dp">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:gravity="center"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:padding="16dp">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/syllabus"-->
+<!--                            android:layout_width="80dp"-->
+<!--                            android:layout_height="80dp"-->
+<!--                            android:src="@drawable/syllabus" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="8dp"-->
+<!--                            android:text="Syllabus"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="18sp" />-->
+<!--                    </LinearLayout>-->
+<!--                </com.google.android.material.card.MaterialCardView>-->
+
+<!--                <com.google.android.material.card.MaterialCardView-->
+<!--                    android:id="@+id/attendance_CardView"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_rowWeight="1"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_margin="12dp"-->
+<!--                    app:cardBackgroundColor="@color/whiteTextColor"-->
+<!--                    app:cardCornerRadius="16dp"-->
+<!--                    app:cardElevation="8dp">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:gravity="center"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:padding="16dp">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/attendance"-->
+<!--                            android:layout_width="80dp"-->
+<!--                            android:layout_height="80dp"-->
+<!--                            android:src="@drawable/attendance" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="8dp"-->
+<!--                            android:text="Attendance"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="18sp" />-->
+<!--                    </LinearLayout>-->
+<!--                </com.google.android.material.card.MaterialCardView>-->
+
+<!--                <com.google.android.material.card.MaterialCardView-->
+<!--                    android:id="@+id/routine_CardView"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_rowWeight="1"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_margin="12dp"-->
+<!--                    app:cardBackgroundColor="@color/whiteTextColor"-->
+<!--                    app:cardCornerRadius="16dp"-->
+<!--                    app:cardElevation="8dp">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:gravity="center"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:padding="16dp">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/routine"-->
+<!--                            android:layout_width="80dp"-->
+<!--                            android:layout_height="80dp"-->
+<!--                            android:src="@drawable/routine" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="8dp"-->
+<!--                            android:fontFamily="@font/roboto_slab"-->
+<!--                            android:text="Routine"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="18sp" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </com.google.android.material.card.MaterialCardView>-->
+
+<!--                <com.google.android.material.card.MaterialCardView-->
+<!--                    android:id="@+id/student_calendar_CardView"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_rowWeight="1"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_margin="12dp"-->
+<!--                    app:cardBackgroundColor="@color/whiteTextColor"-->
+<!--                    android:onClick="academicCalendarViewToStudent"-->
+<!--                    app:cardCornerRadius="16dp"-->
+<!--                    app:cardElevation="8dp">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:gravity="center"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:padding="16dp">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/academic_calendar"-->
+<!--                            android:layout_width="80dp"-->
+<!--                            android:layout_height="80dp"-->
+<!--                            android:src="@drawable/academic_calendar" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="8dp"-->
+<!--                            android:fontFamily="@font/roboto_slab"-->
+<!--                            android:text="Calendar"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="18sp" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </com.google.android.material.card.MaterialCardView>-->
+
+<!--                <com.google.android.material.card.MaterialCardView-->
+<!--                    android:id="@+id/result_CardView"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_rowWeight="1"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_margin="12dp"-->
+<!--                    app:cardBackgroundColor="@color/whiteTextColor"-->
+<!--                    app:cardCornerRadius="16dp"-->
+<!--                    app:cardElevation="8dp">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:gravity="center"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:padding="16dp">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/academic_result"-->
+<!--                            android:layout_width="80dp"-->
+<!--                            android:layout_height="80dp"-->
+<!--                            android:src="@drawable/result" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="8dp"-->
+<!--                            android:fontFamily="@font/roboto_slab"-->
+<!--                            android:text="Result"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="18sp" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </com.google.android.material.card.MaterialCardView>-->
+
+<!--                <com.google.android.material.card.MaterialCardView-->
+<!--                    android:id="@+id/notice_CardView"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_rowWeight="1"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_margin="12dp"-->
+<!--                    app:cardBackgroundColor="@color/whiteTextColor"-->
+<!--                    app:cardCornerRadius="16dp"-->
+<!--                    app:cardElevation="8dp">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:gravity="center"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:padding="16dp">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/academic_notice"-->
+<!--                            android:layout_width="80dp"-->
+<!--                            android:layout_height="80dp"-->
+<!--                            android:src="@drawable/notice" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="8dp"-->
+<!--                            android:fontFamily="@font/roboto_slab"-->
+<!--                            android:text="Notice"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="18sp" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </com.google.android.material.card.MaterialCardView>-->
+
+<!--            </GridLayout>-->
+
+<!--        </ScrollView>-->
+<!--    </RelativeLayout>-->
